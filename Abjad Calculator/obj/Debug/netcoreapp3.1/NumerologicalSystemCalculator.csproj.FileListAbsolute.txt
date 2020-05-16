@@ -1,0 +1,15 @@
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\obj\Debug\netcoreapp3.1\NumerologicalSystemCalculator.csprojAssemblyReference.cache
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\obj\Debug\netcoreapp3.1\Abjad_Calculator.Main.resources
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\obj\Debug\netcoreapp3.1\NumerologicalSystemCalculator.csproj.GenerateResource.cache
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\obj\Debug\netcoreapp3.1\NumerologicalSystemCalculator.csproj.CoreCompileInputs.cache
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\obj\Debug\netcoreapp3.1\NumerologicalSystemCalculator.AssemblyInfoInputs.cache
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\obj\Debug\netcoreapp3.1\NumerologicalSystemCalculator.AssemblyInfo.cs
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\bin\Debug\netcoreapp3.1\NumerologicalSystemCalculator.exe
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\bin\Debug\netcoreapp3.1\NumerologicalSystemCalculator.deps.json
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\bin\Debug\netcoreapp3.1\NumerologicalSystemCalculator.runtimeconfig.json
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\bin\Debug\netcoreapp3.1\NumerologicalSystemCalculator.runtimeconfig.dev.json
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\bin\Debug\netcoreapp3.1\NumerologicalSystemCalculator.dll
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\bin\Debug\netcoreapp3.1\NumerologicalSystemCalculator.pdb
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\obj\Debug\netcoreapp3.1\NumerologicalSystemCalculator.dll
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\obj\Debug\netcoreapp3.1\NumerologicalSystemCalculator.pdb
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\obj\Debug\netcoreapp3.1\NumerologicalSystemCalculator.genruntimeconfig.cache

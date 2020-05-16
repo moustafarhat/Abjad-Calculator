@@ -1,0 +1,15 @@
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\bin\Debug\netcoreapp3.1\Abjad Calculator.exe
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\bin\Debug\netcoreapp3.1\Abjad Calculator.deps.json
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\bin\Debug\netcoreapp3.1\Abjad Calculator.runtimeconfig.json
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\bin\Debug\netcoreapp3.1\Abjad Calculator.runtimeconfig.dev.json
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\bin\Debug\netcoreapp3.1\Abjad Calculator.dll
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\bin\Debug\netcoreapp3.1\Abjad Calculator.pdb
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\obj\Debug\netcoreapp3.1\Abjad Calculator.csprojAssemblyReference.cache
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\obj\Debug\netcoreapp3.1\Abjad Calculator.csproj.CoreCompileInputs.cache
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\obj\Debug\netcoreapp3.1\Abjad Calculator.AssemblyInfoInputs.cache
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\obj\Debug\netcoreapp3.1\Abjad Calculator.AssemblyInfo.cs
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\obj\Debug\netcoreapp3.1\Abjad Calculator.dll
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\obj\Debug\netcoreapp3.1\Abjad Calculator.pdb
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\obj\Debug\netcoreapp3.1\Abjad Calculator.genruntimeconfig.cache
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\obj\Debug\netcoreapp3.1\Abjad_Calculator.Main.resources
+C:\Users\Agent\source\repos\Abjad Calculator\Abjad Calculator\obj\Debug\netcoreapp3.1\Abjad Calculator.csproj.GenerateResource.cache
