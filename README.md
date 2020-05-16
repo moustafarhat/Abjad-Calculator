@@ -3,4 +3,4 @@ The Abjad numerals, also called Hisab al-Jummal (Arabic: حِسَاب ٱلْجُ
 
 ![Test Image 1](program.png)
 
-![Test Image 1](abjad_table.png)
+![Test Image 2](abjad_table.png)
