@@ -1,38 +1,57 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
+using NumerologicalSystemCalculator.Core;
 using NumerologicalSystemCalculator.abjadSystem;
 
 namespace Abjad_Calculator
 {
     public partial class Main : Form
     {
+        private AbjadCalculator _calculator;
 
         public Main()
         {
             InitializeComponent();
+            _calculator = new AbjadCalculator(new AbjadValues());
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Recalculate()
         {
-            var abjad= new AbjadCalculator();
+            var result = _calculator.Calculate(inputTextBox.Text);
+            resultLabel.Text = result.Value.ToString();
 
-            var abjadValues = new AbjadValues();
-
-            var calculatedValue = abjad.Calculator(textBox1.Text, abjadValues.Value);
-
-            if (calculatedValue == 0 && !string.IsNullOrEmpty(textBox1.Text))
+            if (result.UnknownCharacters.Count == 0)
             {
-                MessageBox.Show("Please Enter only Arabic Alphapet", "Error", MessageBoxButtons.OK);
+                statusLabel.Text = string.Empty;
             }
             else
             {
-                label1.Text = calculatedValue.ToString();
+                statusLabel.Text = $"Ignored {result.UnknownCharacters.Count} unsupported character(s): " +
+                                   string.Join(' ', result.UnknownCharacters);
             }
         }
 
-        private void Main_Load(object sender, EventArgs e)
-        {
+        private void InputTextBox_TextChanged(object? sender, EventArgs e) => Recalculate();
 
+        private void CalculateButton_Click(object? sender, EventArgs e) => Recalculate();
+
+        private void CopyButton_Click(object? sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(resultLabel.Text))
+            {
+                Clipboard.SetText(resultLabel.Text);
+            }
+        }
+
+        private void SystemComboBox_SelectedIndexChanged(object? sender, EventArgs e)
+        {
+            INumerologicalSystem system = systemComboBox.SelectedIndex switch
+            {
+                1 => new PersianAbjadValues(),
+                _ => new AbjadValues(),
+            };
+            _calculator = new AbjadCalculator(system);
+            Recalculate();
         }
     }
 }
