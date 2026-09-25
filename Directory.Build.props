@@ -1,0 +1,8 @@
+<Project>
+
+  <PropertyGroup>
+    <!-- Lets non-Windows hosts (e.g. GitHub's Linux dependency-submission job) restore these net8.0-windows projects. -->
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+  </PropertyGroup>
+
+</Project>
