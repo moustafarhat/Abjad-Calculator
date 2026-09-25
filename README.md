@@ -1,10 +1,28 @@
-# Abjad Calculator
+<div align="center">
 
-A small Windows Forms app that computes the **Abjad** numerical value (Ḥisāb al-Jummal, حِسَاب ٱلْجُمَّل) of Arabic text.
+# Abjad Calculator · حاسبة الجُمَّل
 
-In the Abjad system each of the 28 Arabic letters is assigned a fixed numerical value. The value of a word is the sum of the values of its letters. The system has been used historically for chronograms, gematria, mnemonics, and numerology.
+**Calculate the Abjad (Ḥisāb al-Jummal) value of any Arabic text: instantly, offline, free.**
+
+[![CI](https://github.com/moustafarhat/Abjad-Calculator/actions/workflows/ci.yml/badge.svg)](https://github.com/moustafarhat/Abjad-Calculator/actions/workflows/ci.yml)
+[![Latest release](https://img.shields.io/github/v/release/moustafarhat/Abjad-Calculator?sort=semver)](https://github.com/moustafarhat/Abjad-Calculator/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/moustafarhat/Abjad-Calculator/total)](https://github.com/moustafarhat/Abjad-Calculator/releases)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![.NET 8](https://img.shields.io/badge/.NET-8.0-512BD4)
+
+[English](#what-it-does) · [العربية](#بالعربية)
 
 ![Application screenshot](Program.png)
+
+### [⬇ Download for Windows](https://github.com/moustafarhat/Abjad-Calculator/releases/latest)
+
+No installation and no .NET required. Unzip and run `NumerologicalSystemCalculator.exe`.
+
+</div>
+
+## What it does
+
+In the Abjad system each of the 28 Arabic letters is assigned a fixed numerical value. The value of a word is the sum of the values of its letters. The system has been used historically for chronograms, gematria, mnemonics, and numerology.
 
 ## Features
 
@@ -77,6 +95,29 @@ To add another numerological system (e.g. Maghrebī Abjad ordering, Hebrew gemat
 - The default Arabic table follows the **Mashriqī** (Eastern) order. The Maghrebī ordering swaps several values (ص, ض, ظ, غ) and is not implemented.
 - Numerical digits inside the input are reported as unsupported — Abjad only operates on letters.
 - The UI is Windows-only (Windows Forms). The `Core` and `abjadSystem` namespaces have no UI dependencies and can be reused on any .NET 8 target.
+
+## بالعربية
+
+<div dir="rtl">
+
+**حاسبة الجُمَّل** برنامج مجاني يعمل دون اتصال بالإنترنت لحساب القيمة العددية لأي نص عربي بحساب الجُمَّل (الترتيب الأبجدي المشرقي).
+
+- الحساب فوري أثناء الكتابة.
+- توحيد تلقائي لصور الهمزة (أ، إ، آ، ء، ؤ، ئ)، والتاء المربوطة (ة ← ه)، والألف المقصورة (ى ← ي).
+- تجاهل التشكيل والتطويل والمسافات.
+- وضع اختياري للحروف الفارسية (پ، چ، ژ، گ).
+- تنبيه عند وجود حروف غير مدعومة بدلاً من إعطاء نتيجة خاطئة.
+- زر لنسخ النتيجة.
+
+**التحميل:** نزّل أحدث إصدار من [صفحة الإصدارات](https://github.com/moustafarhat/Abjad-Calculator/releases/latest)، ثم فك الضغط وشغّل الملف مباشرة. لا يحتاج البرنامج إلى تثبيت.
+
+</div>
+
+## Contributing
+
+Issues and pull requests are welcome, for example adding the Maghrebī ordering or other numerological systems (see *Project structure* above).
+
+To make a release, push a version tag from `main` (e.g. `git tag v1.0.0; git push origin v1.0.0`). The Release workflow then builds the Windows executable and attaches it to a GitHub release.
 
 ## References
 
