@@ -117,7 +117,7 @@ To add another numerological system (e.g. Maghrebī Abjad ordering, Hebrew gemat
 
 Issues and pull requests are welcome, for example adding the Maghrebī ordering or other numerological systems (see *Project structure* above).
 
-To make a release, push a version tag from `main` (e.g. `git tag v1.0.0; git push origin v1.0.0`). The Release workflow then builds the Windows executable and attaches it to a GitHub release.
+Releases are automatic: bump `<Version>` in `Abjad Calculator/NumerologicalSystemCalculator.csproj` and push to `main`. The Release workflow builds the Windows executable and publishes it as release `v<Version>`. Pushes that don't change the version don't create a release.
 
 ## References
 

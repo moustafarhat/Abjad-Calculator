@@ -1,11 +1,23 @@
 name: Release
 
+# Every push to main checks the <Version> in the app's .csproj. If no
+# release exists for that version yet, it builds the exe and publishes
+# release v<Version>. Pushes without a version bump are skipped.
+
 on:
   push:
-    tags: ['v*']
+    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+env:
+  APP_PROJECT: Abjad Calculator/NumerologicalSystemCalculator.csproj
 
 jobs:
   release:
@@ -13,26 +25,48 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
+      - name: Read version and check for existing release
+        id: version
+        shell: pwsh
+        run: |
+          $version = ([xml](Get-Content $env:APP_PROJECT)).Project.PropertyGroup.Version | Where-Object { $_ } | Select-Object -First 1
+          if (-not $version) { throw "No <Version> found in $env:APP_PROJECT" }
+          $tag = "v$version"
+          git ls-remote --exit-code --tags origin "refs/tags/$tag" | Out-Null
+          $exists = $LASTEXITCODE -eq 0
+          $global:LASTEXITCODE = 0
+          if ($exists) { Write-Output "Release $tag already exists, skipping." }
+          else { Write-Output "Will publish $tag." }
+          "tag=$tag" >> $env:GITHUB_OUTPUT
+          "publish=$(-not $exists)".ToLower() >> $env:GITHUB_OUTPUT
+
       - uses: actions/setup-dotnet@v6
+        if: steps.version.outputs.publish == 'true'
         with:
           dotnet-version: 8.0.x
 
       - name: Test
+        if: steps.version.outputs.publish == 'true'
         run: dotnet test "Abjad Calculator.sln" -c Release
 
       - name: Publish self-contained single-file exe
+        if: steps.version.outputs.publish == 'true'
         run: >
-          dotnet publish "Abjad Calculator/NumerologicalSystemCalculator.csproj"
+          dotnet publish "${{ env.APP_PROJECT }}"
           -c Release -r win-x64 --self-contained true
           -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true
           -p:EnableCompressionInSingleFile=true -p:DebugType=none
           -o publish
 
       - name: Package
+        if: steps.version.outputs.publish == 'true'
         shell: pwsh
-        run: Compress-Archive -Path publish/* -DestinationPath "AbjadCalculator-${{ github.ref_name }}-win-x64.zip"
+        run: Compress-Archive -Path publish/* -DestinationPath "AbjadCalculator-${{ steps.version.outputs.tag }}-win-x64.zip"
 
       - uses: softprops/action-gh-release@v3
+        if: steps.version.outputs.publish == 'true'
         with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          target_commitish: ${{ github.sha }}
           files: AbjadCalculator-*.zip
           generate_release_notes: true

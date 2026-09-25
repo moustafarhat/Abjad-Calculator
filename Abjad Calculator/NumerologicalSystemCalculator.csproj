@@ -7,6 +7,8 @@
     <UseWindowsForms>true</UseWindowsForms>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
+    <!-- Bump this to publish a new GitHub release on the next push to main. -->
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
 </Project>
